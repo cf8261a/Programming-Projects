@@ -33,15 +33,10 @@ while True:
     if event == sg.WIN_CLOSED or event == '-END-':
         break
 
-    # print(f"{event=}")
-    # print(f"{values=}")
     if event == '-ANSWER-' + '_Enter' and len(values['-ANSWER-']) > 0:
-        # print(values['-ANSWER-'])
-        result = values['-ANSWER-']
-        # print(f"{left_op=}")
-        # print(f"{right_op=}")
 
-        # print(f"{left_op*right_op}")
+        result = values['-ANSWER-']
+
         if left_op * right_op != int(result):
             print('Incorrect')
             numIncorrect += 1
