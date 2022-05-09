@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 import helperfile
-import time
 
 gameDB = helperfile.BackendDB()
 # Ensure the db is created
@@ -51,10 +50,8 @@ while True:
         result = values['-ANSWER-']
 
         if left_op * right_op != int(result):
-            print('Incorrect')
             numIncorrect += 1
         else:
-            print('Correct')
             numCorrect += 1
 
     ExpressionResults = helperfile.buildExpression()
